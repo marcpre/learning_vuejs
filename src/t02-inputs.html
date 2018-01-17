@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta>
-    <meta charset="UTF-8">
-    <title>Hello World in Vue.js</title>
-  </meta>
+<meta>
+<meta charset="UTF-8">
+<title>Hello World in Vue.js</title>
+</meta>
 
-  <body>
-	
-    <div id="hello-world-app">
-      <h1>{{ msg }}</h1>
+<body>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+        <!-- v-model directive that makes two-way binding between form input and app state  -->
     </div>
 
-    <script
-      src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
     </script>
 
     <script>
-      new Vue({
-        el: "#hello-world-app",
-        data() {
-          return {
-            msg: "Hello World!"
-          }
-        }
-      });
+        new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Hello Vue!'
+            }
+        });
     </script>
 
-  </body>
+</body>
+
 </html>
