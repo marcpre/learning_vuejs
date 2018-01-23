@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<meta charset="UTF-8">
+<title>Components in Vue.js</title>
+</meta>
+
+<body>
+
+    <div id="app-6">
+        test
+        <my-component></my-component>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    </script>
+
+    <script>
+        // Define a new component called todo-item
+        Vue.component('my-component', {
+            template: '<div>{{ msg }}</div>',
+            data: function() {
+                return {
+                    msg: 'Hello'
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app-6'
+        });
+    </script>
+</body>
+
+</html>
