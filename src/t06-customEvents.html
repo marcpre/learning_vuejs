@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta>
+<meta charset="UTF-8">
+<title>Custom Events in Vue.js</title>
+</meta>
+
+<body>
+
+    <div id="app-6">
+        test
+        <my-component v-on:customevent="eventHandler"></my-component>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    </script>
+
+    <script>
+        // Define a new component called todo-item
+        Vue.component('my-component', {
+            template: '<div v-on:click="emitEvent">{{ msg }}</div>',
+            methods: {
+                emitEvent() {
+                    this.$emit('customevent', 'From the child.');
+                }
+            }
+        });
+
+        new Vue({
+            el: '#app-6',
+            methods: { eventHandler(msg) {
+                //do stuff
+            }}
+        });
+    </script>
+</body>
+
+</html>
